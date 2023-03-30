@@ -111,14 +111,27 @@ public class NumberPuzzle extends Application {
     }
 }
  
-private void final(Stage primaryStage) {  
-    int[] ordem = {};
-    for( int l = 0; l <ROWS - 1; l++){
-        for(int c =0; c < COLS - 1; c++){
-            
+public void fimDoJogo(int[][] nums) {  
+        Object vazio = (nums[4][4] == 0);
+        if ((boolean) vazio){
+        boolean crescente = true;
+        for( int l = 0; l <ROWS ; l++){
+                for(int c =0; c < COLS - 1 ; c++){
+                    if (nums[l][c] > nums[l][c + 1]) {
+                        crescente = false;
+                        break;
+                    }
+                if (!crescente){
+                    break;
+                }
+            }
+            if (crescente){
+                System.out.println("Fim");
+            }
         }
     }
 }
+
 
     public static void main(String[] args) {
         launch(args);  //Método main para inicializar o game 
