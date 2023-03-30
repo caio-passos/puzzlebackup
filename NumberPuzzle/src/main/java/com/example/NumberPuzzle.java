@@ -126,7 +126,7 @@ public void fimDoJogo(int[][] nums) {
                 }
             }
             if (crescente){
-                System.out.println("Fim");
+                System.out.println("Fim"); //modificar para JavaFX
             }
         }
     }
